@@ -1,9 +1,10 @@
 Package: firstlibsabiron
-Title: Analyse des Données Communales et Départementales
+Title: Analyse des Donnees Communales et Departementales
 Version: 0.0.0.9000
 Authors@R: 
-    person("Felix", "Sabiron", email = "felix.sabiron@example.com", role = c("aut", "cre", "maint"))
-Description: Ce package permet d'analyser les données des communes et départements en R.
+    person("Felix", "Sabiron", email = "felix.sabiron@example.com", 
+           role = c("aut", "cre"))
+Description: Ce package permet d'analyser les donnees des communes et departements en R.
 License: GPL-3
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
@@ -13,7 +14,12 @@ BugReports: https://github.com/Felixsabiron/firstlibsabiron/issues
 Imports:
     dplyr,
     ggplot2,
-    lubridate
+    lubridate,
+    stats
 Depends: 
     R (>= 3.5)
 LazyData: true
+Suggests:
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+

@@ -2,34 +2,34 @@
 % Please edit documentation in R/trouver_l_elu_le_plus_age.R
 \name{trouver_l_elus_le_plus_age}
 \alias{trouver_l_elus_le_plus_age}
-\title{Trouver l'élu(e) le plus âgé(e)}
+\title{Trouver l'elu(e) le plus age(e)}
 \usage{
 trouver_l_elus_le_plus_age(data)
 }
 \arguments{
 \item{data}{Un dataframe contenant au moins les colonnes suivantes :
 \itemize{
-\item \code{Nom.de.l.élu} (character) : Le nom de l'élu(e).
-\item \code{Prénom.de.l.élu} (character) : Le prénom de l'élu(e).
-\item \code{Date.de.naissance} (character) : La date de naissance sous format \code{jour/mois/année} (ex: "12/05/1950").
+\item \code{Nom.de.l.elu} (character) : Le nom de l'elu(e).
+\item \code{Prenom.de.l.elu} (character) : Le prenom de l'elu(e).
+\item \code{Date.de.naissance} (character) : La date de naissance sous format \code{jour/mois/annee} (ex: "12/05/1950").
 }}
 }
 \value{
-Un dataframe avec les informations de l'élu(e) le plus âgé(e), contenant les colonnes :
+Un dataframe avec les informations de l'elu(e) le plus age(e), contenant les colonnes :
 \itemize{
-\item \code{Nom.de.l.élu}
-\item \code{Prénom.de.l.élu}
+\item \code{Nom.de.l.elu}
+\item \code{Prenom.de.l.elu}
 \item \code{Date.de.naissance} (au format Date).
 }
 }
 \description{
-Cette fonction identifie l'élu(e) le plus âgé(e) dans un dataframe contenant des informations sur les élus.
+Cette fonction identifie l'elu(e) le plus age(e) dans un dataframe contenant des informations sur les elus.
 }
 \details{
 \itemize{
-\item La fonction vérifie la présence des colonnes requises.
+\item La fonction verifie la presence des colonnes requises.
 \item Elle convertit la colonne \code{Date.de.naissance} en format Date avec \code{lubridate::dmy()}.
-\item Elle sélectionne l'élu(e) avec la date de naissance la plus ancienne.
+\item Elle selectionne l'elu(e) avec la date de naissance la plus ancienne.
 }
 }
 \examples{
@@ -39,12 +39,12 @@ library(lubridate)
 
 # Exemple de dataframe
 data <- data.frame(
-  Nom.de.l.élu = c("Durand", "Martin", "Dupont"),
-  Prénom.de.l.élu = c("Jean", "Sophie", "Paul"),
+  Nom.de.l.elu = c("Durand", "Martin", "Dupont"),
+  Prenom.de.l.elu = c("Jean", "Sophie", "Paul"),
   Date.de.naissance = c("12/05/1950", "23/09/1965", "07/11/1948")
 )
 
-# Trouver l'élu le plus âgé
+# Trouver l'elu le plus age
 trouver_l_elus_le_plus_age(data)
 }
 

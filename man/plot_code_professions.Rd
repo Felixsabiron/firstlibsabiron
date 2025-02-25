@@ -2,29 +2,29 @@
 % Please edit documentation in R/plot_code_professions.R
 \name{plot_code_professions}
 \alias{plot_code_professions}
-\title{Visualiser la répartition des élus par code professionnel}
+\title{Visualiser la repartition des elus par code professionnel}
 \usage{
 plot_code_professions(data)
 }
 \arguments{
 \item{data}{Un dataframe contenant au moins la colonne suivante :
 \itemize{
-\item \code{Code.de.la.catégorie.socio.professionnelle} (character) : Code professionnel des élus.
+\item \code{Code.de.la.categorie.socio.professionnelle} (character) : Code professionnel des elus.
 }}
 }
 \value{
-Un graphique \code{ggplot2} représentant la répartition des élus par code professionnel.
+Un graphique \code{ggplot2} representant la repartition des elus par code professionnel.
 }
 \description{
-La fonction compte le nombre d'élus pour chaque code professionnel (\code{Code.de.la.catégorie.socio.professionnelle}),
-filtre les codes n'ayant aucun élu, puis produit un graphique en barres classé par ordre décroissant.
+La fonction compte le nombre d'elus pour chaque code professionnel (\code{Code.de.la.categorie.socio.professionnelle}),
+filtre les codes n'ayant aucun elu, puis produit un graphique en barres classe par ordre decroissant.
 }
 \details{
-Cette fonction génère un graphique en barres horizontales représentant le nombre d'élus par code professionnel.
+Cette fonction genere un graphique en barres horizontales representant le nombre d'elus par code professionnel.
 \itemize{
-\item Les valeurs à \code{n = 0} sont filtrées avant l'affichage du graphique.
-\item Le graphique est trié par nombre d'élus de manière décroissante.
-\item Les barres sont colorées en bleu foncé pour une meilleure lisibilité.
+\item Les valeurs a \code{n = 0} sont filtrees avant l'affichage du graphique.
+\item Le graphique est trie par nombre d'elus de maniere decroissante.
+\item Les barres sont colorees en bleu fonce pour une meilleure lisibilite.
 }
 }
 \examples{
@@ -34,10 +34,10 @@ library(dplyr)
 
 # Exemple de dataframe
 data <- data.frame(
-  Code.de.la.catégorie.socio.professionnelle = c("A1", "B2", "A1", "C3", "B2", "A1")
+  Code.de.la.categorie.socio.professionnelle = c("A1", "B2", "A1", "C3", "B2", "A1")
 )
 
-# Générer le graphique
+# Generer le graphique
 plot_code_professions(data)
 }
 

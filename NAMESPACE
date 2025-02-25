@@ -2,6 +2,9 @@
 
 S3method(plot,commune)
 S3method(plot,departement)
+S3method(print,summary.departement)
+S3method(summary,commune)
+S3method(summary,departement)
 export(creer_commune)
 export(creer_departement)
 importFrom(dplyr,arrange)

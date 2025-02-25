@@ -1,32 +1,32 @@
-#' Compter le nombre d'élus uniques
+#' Compter le nombre d'elus uniques
 #'
-#' Cette fonction compte le nombre total d'élus présents dans un dataframe contenant leurs informations.
+#' Cette fonction compte le nombre total d'elus presents dans un dataframe contenant leurs informations.
 #'
-#' @param data Un dataframe contenant au moins les colonnes `Nom.de.l.élu`, `Prénom.de.l.élu` et `Date.de.naissance`.
+#' @param data Un dataframe contenant au moins les colonnes `Nom.de.l.elu`, `Prenom.de.l.elu` et `Date.de.naissance`.
 #'
-#' @return Un entier représentant le nombre total d'élus dans le dataframe.
+#' @return Un entier representant le nombre total d'elus dans le dataframe.
 #'
 #' @details
-#' - La fonction vérifie la présence des colonnes obligatoires dans `data`.
-#' - Elle compte le nombre total de lignes du dataframe, supposant que chaque ligne représente un élu unique.
+#' - La fonction verifie la presence des colonnes obligatoires dans `data`.
+#' - Elle compte le nombre total de lignes du dataframe, supposant que chaque ligne represente un elu unique.
 #'
 #' @examples
 #' \dontrun{
 #' # Exemple de dataframe
 #' data <- data.frame(
-#'   Nom.de.l.élu = c("Durand", "Martin", "Dupont", "Durand"),
-#'   Prénom.de.l.élu = c("Jean", "Sophie", "Paul", "Jean"),
+#'   Nom.de.l.elu = c("Durand", "Martin", "Dupont", "Durand"),
+#'   Prenom.de.l.elu = c("Jean", "Sophie", "Paul", "Jean"),
 #'   Date.de.naissance = c("12/05/1950", "23/09/1965", "07/11/1948", "12/05/1950")
 #' )
 #'
-#' # Compter le nombre total d'élus
+#' # Compter le nombre total d'elus
 #' compter_nombre_d_elus(data)
 #' }
 #'
 #'
 compter_nombre_d_elus <- function(data) {
- if (!all(c("Nom.de.l.élu", "Prénom.de.l.élu", "Date.de.naissance") %in% colnames(data))) {
-  stop("Les colonnes de nom, prénom et date de naissance doivent être présentes dans le dataframe.")
+ if (!all(c("Nom.de.l.elu", "Prenom.de.l.elu", "Date.de.naissance") %in% colnames(data))) {
+  stop("Les colonnes de nom, prenom et date de naissance doivent etre presentes dans le dataframe.")
  }
 
  nombre_unique <- nrow(data)

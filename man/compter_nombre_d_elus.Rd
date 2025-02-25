@@ -2,35 +2,35 @@
 % Please edit documentation in R/compter_nombre_d_adjoints.R
 \name{compter_nombre_d_elus}
 \alias{compter_nombre_d_elus}
-\title{Compter le nombre d'élus uniques}
+\title{Compter le nombre d'elus uniques}
 \usage{
 compter_nombre_d_elus(data)
 }
 \arguments{
-\item{data}{Un dataframe contenant au moins les colonnes \code{Nom.de.l.élu}, \code{Prénom.de.l.élu} et \code{Date.de.naissance}.}
+\item{data}{Un dataframe contenant au moins les colonnes \code{Nom.de.l.elu}, \code{Prenom.de.l.elu} et \code{Date.de.naissance}.}
 }
 \value{
-Un entier représentant le nombre total d'élus dans le dataframe.
+Un entier representant le nombre total d'elus dans le dataframe.
 }
 \description{
-Cette fonction compte le nombre total d'élus présents dans un dataframe contenant leurs informations.
+Cette fonction compte le nombre total d'elus presents dans un dataframe contenant leurs informations.
 }
 \details{
 \itemize{
-\item La fonction vérifie la présence des colonnes obligatoires dans \code{data}.
-\item Elle compte le nombre total de lignes du dataframe, supposant que chaque ligne représente un élu unique.
+\item La fonction verifie la presence des colonnes obligatoires dans \code{data}.
+\item Elle compte le nombre total de lignes du dataframe, supposant que chaque ligne represente un elu unique.
 }
 }
 \examples{
 \dontrun{
 # Exemple de dataframe
 data <- data.frame(
-  Nom.de.l.élu = c("Durand", "Martin", "Dupont", "Durand"),
-  Prénom.de.l.élu = c("Jean", "Sophie", "Paul", "Jean"),
+  Nom.de.l.elu = c("Durand", "Martin", "Dupont", "Durand"),
+  Prenom.de.l.elu = c("Jean", "Sophie", "Paul", "Jean"),
   Date.de.naissance = c("12/05/1950", "23/09/1965", "07/11/1948", "12/05/1950")
 )
 
-# Compter le nombre total d'élus
+# Compter le nombre total d'elus
 compter_nombre_d_elus(data)
 }
 

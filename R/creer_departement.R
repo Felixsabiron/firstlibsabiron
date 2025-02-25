@@ -1,38 +1,38 @@
-#' Créer un objet de type "departement"
+#' Creer un objet de type "departement"
 #'
-#' Cette fonction transforme un dataframe représentant un département en un objet de classe "departement".
+#' Cette fonction transforme un dataframe representant un departement en un objet de classe "departement".
 #'
-#' @param df Un dataframe contenant au moins la colonne `Code.du.département`.
+#' @param df Un dataframe contenant au moins la colonne `Code.du.departement`.
 #'
-#' @return Un dataframe de classe `"departement"`, qui peut être utilisé avec des fonctions spécifiques aux départements.
+#' @return Un dataframe de classe `"departement"`, qui peut etre utilise avec des fonctions specifiques aux departements.
 #'
 #' @details
-#' - La fonction vérifie que la colonne `Code.du.département` est présente dans `df`.
-#' - Elle s'assure que le dataframe représente un seul département, sinon elle génère une erreur.
-#' - La classe `"departement"` est ajoutée à l'objet pour permettre un traitement spécifique.
+#' - La fonction verifie que la colonne `Code.du.departement` est presente dans `df`.
+#' - Elle s'assure que le dataframe represente un seul departement, sinon elle genere une erreur.
+#' - La classe `"departement"` est ajoutee a l'objet pour permettre un traitement specifique.
 #'
 #' @examples
 #' \dontrun{
 #' data <- data.frame(
-#'   Code.du.département = rep("75", 10),
-#'   Nom.du.département = rep("Paris", 10),
+#'   Code.du.departement = rep("75", 10),
+#'   Nom.du.departement = rep("Paris", 10),
 #'   Population = c(100, 200, 150, 180, 220, 250, 300, 270, 260, 280)
 #' )
 #' departement <- creer_departement(data)
-#' class(departement)  # Vérifier la classe
+#' class(departement)  # Verifier la classe
 #' }
 #'
 #' @export
 creer_departement <- function(df) {
- # Vérifier la présence de la colonne clé
- if (!"Code.du.département" %in% colnames(df)) {
-  stop("Le dataframe doit contenir la colonne 'Code.du.département'.")
+ # Verifier la presence de la colonne cle
+ if (!"Code.du.departement" %in% colnames(df)) {
+  stop("Le dataframe doit contenir la colonne 'Code.du.departement'.")
  }
 
- # Vérifier s'il y a plusieurs départements
- unique_departements <- unique(df$Code.du.département)
+ # Verifier s'il y a plusieurs departements
+ unique_departements <- unique(df$Code.du.departement)
  if (length(unique_departements) > 1) {
-  stop("Le dataframe contient plusieurs départements. Fournissez les données d'un seul département.")
+  stop("Le dataframe contient plusieurs departements. Fournissez les donnees d'un seul departement.")
  }
 
  # Ajouter la classe "departement"
@@ -42,3 +42,4 @@ creer_departement <- function(df) {
 
  return(df)
 }
+

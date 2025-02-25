@@ -1,13 +1,13 @@
 utils::globalVariables(c(
  "validate_schema",
- "Code.de.la.catégorie.socio.professionnelle",
+ "Code.de.la.categorie.socio.professionnelle",
  "n",
  "desc",
  "reorder",
- "Libellé.de.la.commune",
+ "Libelle.de.la.commune",
  "Date.de.naissance",
- "Nom.de.l.élu",
- "Prénom.de.l.élu"
+ "Nom.de.l.elu",
+ "Prenom.de.l.elu"
 ))
 utils::globalVariables(c(
  "Code.de.la.categorie.socio.professionnelle",
