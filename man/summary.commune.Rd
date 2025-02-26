@@ -2,19 +2,16 @@
 % Please edit documentation in R/summary_commune.R
 \name{summary.commune}
 \alias{summary.commune}
-\title{Résumé pour les objets de classe commune}
+\title{Methode S3 pour summary.commune}
 \usage{
-\method{summary}{commune}(obj, ...)
+\method{summary}{commune}(object, ...)
 }
 \arguments{
-\item{obj}{Un objet de classe \code{commune}.}
+\item{object}{Un objet de classe \code{commune}.}
 
-\item{...}{Arguments supplémentaires (non utilisés).}
-}
-\value{
-Un résumé des informations de la commune sous forme de liste.
+\item{...}{Arguments supplementaires (non utilises).}
 }
 \description{
-Cette fonction génère un résumé pour les objets de classe \code{commune}.
-Elle affiche le nom de la commune et le nombre total d'élus.
+Cette fonction redirige automatiquement \code{summary()} vers \code{summary_commune()}
+pour les objets de classe \code{commune}.
 }

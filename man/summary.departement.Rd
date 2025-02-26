@@ -2,7 +2,7 @@
 % Please edit documentation in R/summary_departement.R
 \name{summary.departement}
 \alias{summary.departement}
-\title{Resume pour les objets de classe departement}
+\title{Methode S3 pour summary.departement}
 \usage{
 \method{summary}{departement}(object, ...)
 }
@@ -11,10 +11,7 @@
 
 \item{...}{Arguments supplementaires (non utilises).}
 }
-\value{
-Un resume des informations du departement sous forme de liste.
-}
 \description{
-Cette fonction genere un resume pour les objets de classe \code{departement}.
-Elle affiche le nom du departement, le nombre total de communes, et le nombre total d'elus.
+Cette fonction redirige automatiquement \code{summary()} vers \code{summary_departement()}
+pour les objets de classe \code{departement}.
 }

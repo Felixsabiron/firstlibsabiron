@@ -35,15 +35,14 @@
 #' class(data) <- c("commune", class(data))
 #'
 #' # Generer le graphique
-#' plot(data)
+#' plot_commune(data)
 #' }
 #'
 #' @importFrom dplyr count filter arrange desc
 #' @importFrom ggplot2 ggplot aes geom_bar geom_text labs theme_minimal
 #' @importFrom stats reorder
-#' @method plot commune
 #' @export
-plot.commune <- function(x, ...) {
+plot_commune <- function(x, ...) {
  df <- x  # Assigne `x` a `df` pour garder le reste du code inchange
 
  # Verifier que le DataFrame respecte le schema attendu

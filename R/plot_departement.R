@@ -37,15 +37,14 @@
 #' class(data) <- c("departement", class(data))
 #'
 #' # Generer le graphique
-#' plot(data)
+#' plot_departement(data)
 #' }
 #'
 #' @importFrom dplyr count filter arrange distinct slice_head desc
 #' @importFrom ggplot2 ggplot aes geom_bar geom_text labs theme_minimal
 #' @importFrom stats reorder
-#' @method plot departement
 #' @export
-plot.departement <- function(x, ...) {
+plot_departement <- function(x, ...) {
  df <- x  # Assigne `x` a `df` pour garder le reste du code inchange
 
  # Verifier que le DataFrame respecte la structure minimale

@@ -4,10 +4,10 @@
 \alias{print.summary.departement}
 \title{Affichage du resume pour summary.departement}
 \usage{
-\method{print}{summary.departement}(object, ...)
+\method{print}{summary.departement}(x, ...)
 }
 \arguments{
-\item{object}{Un objet de classe \code{summary.departement}.}
+\item{x}{Un objet de classe \code{summary.departement}.}
 
 \item{...}{Arguments supplementaires (non utilises).}
 }

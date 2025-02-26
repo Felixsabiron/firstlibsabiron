@@ -1,4 +1,4 @@
-#' Resume pour les objets de classe departement
+#' Resume pour les objets de classe "departement"
 #'
 #' Cette fonction genere un resume pour les objets de classe `departement`.
 #' Elle affiche le nom du departement, le nombre total de communes, et le nombre total d'elus.
@@ -8,8 +8,7 @@
 #'
 #' @return Un resume des informations du departement sous forme de liste.
 #' @export
-#' @method summary departement
-summary.departement <- function(object, ...) {
+summary_departement <- function(object, ...) {
 
  # Verification de la classe de l'objet
  if (!inherits(object, "departement")) {
@@ -34,25 +33,37 @@ summary.departement <- function(object, ...) {
   nombre_elus = nb_elus
  )
 
- # Attribution de la classe summary.departement a la liste
+ # Attribution de la classe "summary.departement" a la liste
  class(result) <- "summary.departement"
 
- # Retourner le resultat
  return(result)
+}
+
+#' Methode S3 pour summary.departement
+#'
+#' Cette fonction redirige automatiquement `summary()` vers `summary_departement()`
+#' pour les objets de classe `departement`.
+#'
+#' @param object Un objet de classe `departement`.
+#' @param ... Arguments supplementaires (non utilises).
+#'
+#' @export
+summary.departement <- function(object, ...) {
+ summary_departement(object, ...)
 }
 
 #' Affichage du resume pour summary.departement
 #'
 #' Cette fonction definit l'affichage personnalise pour les objets de classe `summary.departement`.
 #'
-#' @param object Un objet de classe `summary.departement`.
+#' @param x Un objet de classe `summary.departement`.
 #' @param ... Arguments supplementaires (non utilises).
 #'
 #' @return NULL (resume affiche dans la console)
 #' @export
-print.summary.departement <- function(object, ...) {
+print.summary.departement <- function(x, ...) {
  cat("Resume du departement :\n")
- cat("Nom du departement :", object$nom_departement, "\n")
- cat("Nombre total de communes :", object$nombre_communes, "\n")
- cat("Nombre total d'elus :", object$nombre_elus, "\n")
+ cat("Nom du departement :", x$nom_departement, "\n")
+ cat("Nombre total de communes :", x$nombre_communes, "\n")
+ cat("Nombre total d'elus :", x$nombre_elus, "\n")
 }
