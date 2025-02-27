@@ -77,3 +77,5 @@ test_that("summary_departement fonctionne correctement", {
  expect_s3_class(result, "summary.departement")
 })
 
+
+
