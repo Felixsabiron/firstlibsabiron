@@ -1,29 +1,41 @@
 ---
 title: "Générer un rapport d'analyses"
-format:
-  html:
-    code-fold: true
-    toc: true
-    toc-depth: 2
-    self-contained: true
-    theme: cosmo
-engine: knitr
+author: "Sabiron Félix"
+format: html
 ---
 
-# Introduction 
-
-Ce document montre comment utiliser les fonctions `summary.commune`, `summary.departement`, et `generer_rapport()` du package **firstlibsabiron** pour générer des rapports d'analyses.
-
----
-
-## 1. Utilisation de `summary.commune`
-
-La fonction `summary.commune` permet de résumer les données pour une commune donnée.
-
-```{r}
-remotes::install_github("Felixsabiron/firstlibsabiron")
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
 ```
 
+# Introduction
+
+Ce document montre comment utiliser les fonctions summary_commune, summary_departement, et generer_rapport du package **firstlibsabiron** pour générer des rapports d'analyses.
+
+ - summary_commune(): pour obtenir un résumé des élus d’une commune.
+
+ - summary_departement(): pour analyser les élus d’un département.
+
+ - generer_rapport(): pour générer un rapport HTML complet avec Quarto.
+
+Le package firstlibsabiron permet d’analyser les données des élus français à travers ces fonctions.
+
+
+# 1. Utilisation de summary_commune
+
+La fonction summary_commune permet de résumer les données pour une commune donnée.
+
+Elle affiche :
+
+- Le nom de la commune
+- Le nombre total d’élus
+- La repartition professionnelle
+
+
+### Execution de summary_commune()
 
 ```{r}
 library(firstlibsabiron)
@@ -38,8 +50,26 @@ commune_data <- elus_conseillers_municipaux_cm %>%
 
 summary_commune(commune_data)
 
-
 ```
+
+**Interprétation des résultats :**
+
+- le nom du departement est "Loire-Atlantique" 
+- Il comprent un total de 207 communes 
+- Il y a 4791 elus
+
+
+# 2. Utilisation de summary_departement
+
+La fonction summary_departement() offre une vue d’ensemble des élus d’un département.
+
+Elle affiche le resume du departement, soit :
+
+- Le nom du département
+- Le nombre total de communes
+- Le nombre total d'elus
+
+### Exécution de summary_departement()
 
 ```{r setup}
 # Exemple pour le département de la Loire-Atlantique (44)
@@ -50,9 +80,36 @@ departement_data <- elus_conseillers_municipaux_cm %>%
 summary_departement(departement_data)
 ```
 
+**Interprétation :**
 
-```{r}
-# Exemple pour generer un rapport sur la commune 44109 et le departement 44
-#generer_rapport(commune = "44109", departement = "44", output = "rapport_nantes_final.html")
-```
+- Le département étudié est Loire-Atlantique.
+- Il contient 207 communes différentes.
+- Il y a 4791 elus dans ce department
+
+La fonction summary_departement() est un outil permettant une analyse rapide 
+sur le nombre de communes représentées et la structure démographique des élus.
+
+
+# Génération d’un Rapport Quarto
+
+
+## Fonction generer_rapport(commune, departement, output)
+
+La fonction generer_rapport() permet de générer un rapport interactif en HTML avec Quarto.
+
+Le rapport contiendra : 
+
+- Un résumé des élus de la commune et du département.
+- Des statistiques détaillées sur les élus.
+- Des graphiques pour illustrer les résultats.
+
+Le fichier rapport_commune.html sera généré et contiendra toutes les analyses.
+
+
+## 3. Utilisation de generer_rapport
+
+# Pour générer un rapport HTML avec Quarto :
+# Exemple avec la commune 44109 et le departement 44
+# generer_rapport(commune = "44109", departement = "44", output = "rapport_nantes_final.html")
+
 

@@ -11,13 +11,13 @@ generer_rapport(commune, departement, output)
 
 \item{departement}{Le departement concerne (code numerique).}
 
-\item{output}{Le nom du fichier de sortie (sans chemin).}
+\item{output}{Le nom du fichier de sortie (ex: "rapport.pdf" ou "rapport.html").}
 }
 \value{
 Le chemin du fichier genere.
 }
 \description{
-Cette fonction genere un rapport Quarto au format PDF incluant :
+Cette fonction genere un rapport Quarto au format PDF ou HTML incluant :
 \itemize{
 \item Une visualisation des elus par code professionnel pour la commune et le departement.
 \item Un resume des informations pour la commune et le departement.

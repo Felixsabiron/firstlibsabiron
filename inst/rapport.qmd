@@ -52,6 +52,7 @@ data_commune <- creer_commune(data_commune)
 plot_commune(data_commune)
 ```
 
+
 ```{r}
 # Filtrer les données pour le département spécifié
 data_departement <- creer_departement(elus_conseillers_municipaux_cm %>%
@@ -59,5 +60,10 @@ data_departement <- creer_departement(elus_conseillers_municipaux_cm %>%
 
 plot_departement(data_departement)
 
+```
+
+```{r}
+summary_commune(data_commune)
+summary_departement(data_departement)
 ```
 

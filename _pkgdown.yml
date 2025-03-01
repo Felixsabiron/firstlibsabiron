@@ -1,4 +1,6 @@
 url: https://felixsabiron.github.io/firstlibsabiron/
 template:
   bootstrap: 5
-
+home:
+  title: "Documentation de firstlibsabiron"
+  description: "Un package R pour analyser les élus français et générer des rapports interactifs."
