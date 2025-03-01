@@ -54,9 +54,8 @@ summary_commune(commune_data)
 
 **Interprétation des résultats :**
 
-- le nom du departement est "Loire-Atlantique" 
-- Il comprent un total de 207 communes 
-- Il y a 4791 elus
+- le nom de la communne est "Nantes" 
+- Il y a un total de 66 elus dans la commune de Nantes
 
 
 # 2. Utilisation de summary_departement
@@ -108,8 +107,8 @@ Le fichier rapport_commune.html sera généré et contiendra toutes les analyses
 
 ## 3. Utilisation de generer_rapport
 
-# Pour générer un rapport HTML avec Quarto :
-# Exemple avec la commune 44109 et le departement 44
-# generer_rapport(commune = "44109", departement = "44", output = "rapport_nantes_final.html")
+ Pour générer un rapport HTML avec Quarto :
+Exemple avec la commune 44109 et le departement 44:
+**generer_rapport(commune = "44109", departement = "44", output = "rapport_nantes_final.html")**
 
 
