@@ -37,8 +37,7 @@ A full documentation website presenting the package workflow, the purpose of eac
 Please note that the documentation website is written in **French**.
 
 🔗 **Access the French documentation website**  
-https://felixsabiron.github.io/firstlibsabiron/articles/generer_un_rapport_d_analyses.html
-
+ https://felixsabiron.github.io/firstlibsabiron/
 ---
 
 ## 📌 Project Objectives
