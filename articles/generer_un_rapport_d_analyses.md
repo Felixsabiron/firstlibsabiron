@@ -29,6 +29,7 @@ Elle affiche :
 #### Execution de summary_commune()
 
 ``` r
+
 library(firstlibsabiron)
 library(dplyr)
 #> 
@@ -42,6 +43,7 @@ library(dplyr)
 ```
 
 ``` r
+
 # Exemple pour la commune de Nantes (44109)
 commune_data <- elus_conseillers_municipaux_cm %>%
   filter(Code.de.la.commune == "44109") %>%
@@ -88,6 +90,7 @@ Elle affiche le resume du departement, soit :
 #### Exécution de summary_departement()
 
 ``` r
+
 # Exemple pour le département de la Loire-Atlantique (44)
 departement_data <- elus_conseillers_municipaux_cm %>%
   filter(Code.du.departement == "44") %>%
